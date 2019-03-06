@@ -22,7 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-06T15:04:00.538Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-06T15:30:32.382Z")
 
 @Api(value = "pricing", description = "the pricing API")
 public interface PricingApi {
@@ -32,7 +32,7 @@ public interface PricingApi {
         @ApiResponse(code = 200, message = "successfull operation", response = Pricing.class),
         @ApiResponse(code = 405, message = "Invalid input") })
     @RequestMapping(value = "/pricing",
-        produces = { "application/xml", "application/json" }, 
+        produces = { "application/json" }, 
         consumes = { "application/x-www-form-urlencoded" },
         method = RequestMethod.POST)
     ResponseEntity<Pricing> updatePricingIdWithForm(@ApiParam(value = "ID of PricingId that needs to be updated" ,required=true )  @Valid @RequestBody PricingCriteria body);

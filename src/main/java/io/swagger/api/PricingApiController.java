@@ -21,7 +21,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-06T15:04:00.538Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-06T15:30:32.382Z")
 
 @Controller
 public class PricingApiController implements PricingApi {
@@ -40,15 +40,6 @@ public class PricingApiController implements PricingApi {
 
     public ResponseEntity<Pricing> updatePricingIdWithForm(@ApiParam(value = "ID of PricingId that needs to be updated" ,required=true )  @Valid @RequestBody PricingCriteria body) {
         String accept = request.getHeader("Accept");
-        if (accept != null && accept.contains("application/xml")) {
-            try {
-                return new ResponseEntity<Pricing>(objectMapper.readValue("<null>  <PricingId>123456789</PricingId>  <rate>0.5</rate></null>", Pricing.class), HttpStatus.NOT_IMPLEMENTED);
-            } catch (IOException e) {
-                log.error("Couldn't serialize response for content type application/xml", e);
-                return new ResponseEntity<Pricing>(HttpStatus.INTERNAL_SERVER_ERROR);
-            }
-        }
-
         if (accept != null && accept.contains("application/json")) {
             try {
                 return new ResponseEntity<Pricing>(objectMapper.readValue("{  \"PricingId\" : 0,  \"rate\" : 0.5}", Pricing.class), HttpStatus.NOT_IMPLEMENTED);
