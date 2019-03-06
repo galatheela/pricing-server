@@ -13,7 +13,7 @@ import javax.validation.constraints.*;
  * PricingCriteria
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-06T15:44:37.551Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-06T15:59:07.679Z")
 
 public class PricingCriteria   {
   @JsonProperty("amount")
@@ -31,8 +31,7 @@ public class PricingCriteria   {
    * Get amount
    * @return amount
   **/
-  @ApiModelProperty(required = true, value = "")
-  @NotNull
+  @ApiModelProperty(value = "")
 
 
   public Long getAmount() {
@@ -52,8 +51,7 @@ public class PricingCriteria   {
    * Get duration
    * @return duration
   **/
-  @ApiModelProperty(example = "30", required = true, value = "")
-  @NotNull
+  @ApiModelProperty(example = "30", value = "")
 
 
   public Integer getDuration() {

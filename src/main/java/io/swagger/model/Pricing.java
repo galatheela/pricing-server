@@ -14,10 +14,10 @@ import javax.validation.constraints.*;
  * Pricing
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-06T15:44:37.551Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-06T15:59:07.679Z")
 
 public class Pricing   {
-  @JsonProperty("PricingId")
+  @JsonProperty("pricingId")
   private Long pricingId = null;
 
   @JsonProperty("rate")
