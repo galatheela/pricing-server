@@ -5,6 +5,7 @@
  */
 package io.swagger.api;
 
+import io.swagger.model.Pricing;
 import io.swagger.model.PricingCriteria;
 import io.swagger.annotations.*;
 import org.springframework.http.ResponseEntity;
@@ -21,19 +22,19 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-06T14:54:04.180Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-06T15:04:00.538Z")
 
 @Api(value = "pricing", description = "the pricing API")
 public interface PricingApi {
 
-    @ApiOperation(value = "Updates a Pricing form data", nickname = "updatePricingIdWithForm", notes = "", response = Object.class, tags={ "pricing", })
+    @ApiOperation(value = "Updates a Pricing form data", nickname = "updatePricingIdWithForm", notes = "", response = Pricing.class, tags={ "pricing", })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "successfull operation", response = Object.class),
+        @ApiResponse(code = 200, message = "successfull operation", response = Pricing.class),
         @ApiResponse(code = 405, message = "Invalid input") })
     @RequestMapping(value = "/pricing",
         produces = { "application/xml", "application/json" }, 
         consumes = { "application/x-www-form-urlencoded" },
         method = RequestMethod.POST)
-    ResponseEntity<Object> updatePricingIdWithForm(@ApiParam(value = "ID of PricingId that needs to be updated" ,required=true )  @Valid @RequestBody PricingCriteria body);
+    ResponseEntity<Pricing> updatePricingIdWithForm(@ApiParam(value = "ID of PricingId that needs to be updated" ,required=true )  @Valid @RequestBody PricingCriteria body);
 
 }
