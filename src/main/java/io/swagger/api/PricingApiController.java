@@ -42,8 +42,15 @@ public class PricingApiController implements PricingApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<Pricing>(objectMapper.readValue("{  \"rate\" : 0.5,  \"pricingId\" : 0}", Pricing.class), HttpStatus.NOT_IMPLEMENTED);
-            } catch (IOException e) {
+                Pricing rep = new Pricing();
+                int pricingId = 0;
+                double rate = 0.01;
+                
+                rep.setpricingId(pricingId);
+                rep.setrate(rate);
+    
+                return new ResponseEntity<Pricing>(objectMapper.readValue(rep, HttpStatus.NOT_IMPLEMENTED);
+                                                   } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<Pricing>(HttpStatus.INTERNAL_SERVER_ERROR);
             }
